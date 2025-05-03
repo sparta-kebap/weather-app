@@ -1,2 +1,2 @@
-# to-do list
-the odin project to-do list assignment
+# weather app
+the odin project weather app assignment
