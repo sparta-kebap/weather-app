@@ -9,6 +9,11 @@
     "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
+    "uuid": "^11.1.0",
     "web": "^0.0.2"
+  },
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
   }
 }

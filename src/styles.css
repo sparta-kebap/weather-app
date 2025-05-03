@@ -1,192 +1,32 @@
-/* General styles for body and layout */
+/* || HOST FONTS */
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src:
+    url("./fonts/Ubuntu-Regular.woff2") format("woff2"),
+    url("./fonts/Ubuntu-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  src:
+    url("./fonts/Ubuntu-Medium.woff2") format("woff2"),
+    url("./fonts/Ubuntu-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  src:
+    url("./fonts/Ubuntu-Bold.woff2") format("woff2"),
+    url("./fonts/Ubuntu-Bold.woff") format("woff");
+  font-display: swap;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Light background */
-    color: #333; /* Text color */
-}
-
-header {
-    background-color: #222; /* Dark header */
-    color: white;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-button {
-    background-color: #007bff; /* Blue button */
-    border: none;
-    border-radius: 5px; /* Rounded corners */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth hover effect */
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue when hovering */
-    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.4); /* Glow effect */
-}
-
-button:active {
-    transform: scale(0.95); /* Button pressed effect */
-}
-
-#content {
-    max-width: 1200px;
-    margin: 10px auto;
-    padding: 10px;
-    padding-bottom: 100px; /* Add enough space above the footer */
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-h1 {
-    color: #222; /* Header text color */
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-p {
-    text-align: center;
-    font-size: 1.2em;
-}
-
-footer {
-    text-align: center;
-    padding: 8px 0;
-    background-color: #dfb8864e;
-    color: rgb(140, 140, 140);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Styling for the home-image-div */
-#slide-show-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-    margin-bottom: 80px; /* Add spacing above the footer */
-    width: 100%;
-    max-width: 700px;
-    height: auto; /* Dynamically adjust height */
-    max-height: 500px;
-    overflow: hidden;
-    padding: 6px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-}
-
-
-
-/* Styling for the image */
-#slide-show-div .mySlides {
-    max-width: 100%; /* Ensure the image is responsive */
-    max-height: 100%;
-    border-radius: 5px; /* Slight rounding for the image corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
-  }
-  
-
-.menu-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
-    grid-gap: 20px; /* Adds spacing between the grid items */
-    margin: 20px; /* Optional: Adds spacing around the grid */
-}
-
-.menu-card {
-    width: 300px;
-    height: 300px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around; /* Adjusts the spacing within the card */
-    padding: 10px; /* Adds space between the elements and edges of the card */
-}
-
-.menu-card img {
-    width: 100%;
-    height: auto;
-    max-height: 180px; /* Ensures the image doesn't exceed this height */
-    border-radius: 5px; /* Optional: Add rounded corners to the image */
-    object-fit: cover; /* Makes the image fit perfectly into its container */
-}
-
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns: left for divs, right for the image */
-    grid-template-rows: auto; /* Automatically adjusts rows */
-    grid-gap: 20px; /* Adds spacing between elements */
-    height: 100%; /* Optional: Adjust height as needed */
-    
-}
-
-.contact-div {
-    margin-left: 160px;
-    padding:1rem;
-    
-}
-
-.left-column {
-    display: flex;
-    flex-direction: column; /* Stacks the divs vertically */
-    justify-content:center; /* Aligns content to the bottom */
-    gap: 16px; /* Space between the divs */
-    padding:1rem;
-}
-
-.image-container {
-    display: flex;
-    width: 300px;
-    height: 400px;
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
-    margin: 10px auto; /* Add space around the div */
-    padding: 6px;
-    background: #ffffff; /* White background for a clean look */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 1px solid #ddd; /* Light border for definition */
-}
-
-.contact-image {
-    max-width: 100%; /* Ensures the image fits within the container */
-    border-radius: 10px; /* Optional: Rounded corners for the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow effect */
-    padding: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400; /* Regular weight */
 }

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Odin Project To-Do List</title>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div id="main-container">
+      <header>
+        <img
+          class="header-img"
+          src="assets/to-do.svg"
+          alt="check in circle icon"
+        />
+        <h1>To-Do List</h1>
+      </header>
+
+      <div id="left-column">
+        <div class="project-list">
+          <h2>Project List</h2>
+        </div>
+
+        <button class="add-project-button">+ New Project</button>
+        <dialog id="new-project-dialog">
+          <div id="form-container">
+            <form id="project-info" action="#" method="get">
+              <div>
+                <label for="project-title">Project Title: </label>
+                <input
+                  type="text"
+                  id="project-title"
+                  name="project-title"
+                  required
+                />
+              </div>
+
+              <div id="dialog-buttons">
+                <button type="submit" class="submit-btn" id="add-project">
+                  Add
+                </button>
+                <button class="clear-btn" id="clear-project">Clear</button>
+                <button
+                  value="close"
+                  formmethod="dialog"
+                  class="close-btn"
+                  id="close-project-dialog"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+
+        <dialog id="edit-project-name-dialog">
+          <div id="form-container">
+            <form id="existing-project-info" action="#" method="get">
+              <div>
+                <label for="existing-project-title">Project Title: </label>
+                <input
+                  type="text"
+                  id="existing-project-title"
+                  name="existing-project-title"
+                  required
+                />
+              </div>
+
+              <div id="dialog-buttons">
+                <button
+                  type="submit"
+                  class="project-edit-submit-btn"
+                  id="edit-project-name"
+                >
+                  Add
+                </button>
+                <button
+                  value="close"
+                  formmethod="dialog"
+                  class="project-edit-close-btn"
+                  id="close-edit-project-name-dialog"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+      </div>
+
+      <div id="right-column">
+        <button class="add-task-button" id="add-task">+ Add Task</button>
+        <dialog id="new-task-dialog">
+          <div id="form-container">
+            <form id="task-info" action="#" method="get">
+              <div>
+                <label for="task-title">Task Title: </label>
+                <input type="text" id="task-title" name="task-title" required />
+              </div>
+
+              <div>
+                <label for="task-description">Description: </label>
+                <input
+                  type="text"
+                  id="task-description"
+                  name="task-description"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="task-date">Date: </label>
+                <input type="date" id="task-date" name="task-date" required />
+              </div>
+
+              <div>
+                <label for="task-priority">Priority: </label>
+                <select id="task-priority" name="task-priority" required>
+                  <option value="" disabled selected>Select priority</option>
+                  <option value="high">High</option>
+                  <option value="mid">Mid</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+
+              <div id="dialog-buttons">
+                <button type="submit" id="submit-btn">Add</button>
+                <button id="clear-btn">Clear</button>
+                <button value="close" formmethod="dialog" id="close-btn">
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+
+        <dialog id="edit-task-dialog">
+          <div id="form-container">
+            <form id="edit-task-info" action="#" method="get">
+              <div>
+                <label for="edit-task-title">Task Title: </label>
+                <input
+                  type="text"
+                  id="edit-task-title"
+                  name="edit-task-title"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="edit-task-description">Description: </label>
+                <input
+                  type="text"
+                  id="edit-task-description"
+                  name="edit-task-description"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="edit-task-date">Date: </label>
+                <input
+                  type="date"
+                  id="edit-task-date"
+                  name="edit-task-date"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="edit-task-priority">Priority: </label>
+                <select
+                  id="edit-task-priority"
+                  name="edit-task-priority"
+                  required
+                >
+                  <option value="" disabled selected>Select priority</option>
+                  <option value="high">High</option>
+                  <option value="mid">Mid</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+
+              <div id="dialog-buttons">
+                <button type="submit" id="submit-edit-btn">Save</button>
+                <button value="close" formmethod="dialog" id="close-edit-btn">
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+        <div class="project-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
